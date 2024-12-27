@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as vars;
+.contact {
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid vars.$primary-color;
+  padding-bottom: 84.5px;
+  .contact--infor {
+    width: 826px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 64px;
+    border-bottom: 2px solid vars.$primary-color;
+    p {
+      color: vars.$primary-color;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+  .contact--logo {
+    width: 778px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 103px;
+    padding-top: 64px;
+  }
+  .contact__playground {
+    padding-top: 175px;
+    .contact__playground--infor {
+      text-align: center;
+      h1 {
+        color: vars.$primary-color;
+        font-size: 38px;
+        letter-spacing: 0.4px;
+      }
+      & > div {
+        padding-top: 20px;
+        letter-spacing: 0.2px;
+
+        font-size: 24px;
+        a {
+          color: vars.$secondary-color;
+        }
+      }
+    }
+  }
+  .contact__slider {
+    padding-top: 56px;
+    display: flex;
+    gap: 30px;
+  }
+  .contact__form {
+    padding-top: 170px;
+    display: flex;
+    .contact__form--title {
+      width: 556px;
+      color: vars.$primary-color;
+      h1 {
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1.45;
+        letter-spacing: 0.35px;
+      }
+    }
+    .contact__form--subscrible {
+      width: 620px;
+      .contact__form--subscrible--cover {
+        position: relative;
+      }
+      input {
+        width: 100%;
+        height: 62px;
+        line-height: 64px;
+        padding: 0 26px;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        background-color: #f2f1f6;
+        border: none;
+      }
+      span {
+        position: absolute;
+        top: 51%;
+        right: 25px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: vars.$primary-color;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .contact__form--subscrible--icon {
+        padding-left: 38px;
+        padding-top: 44px;
+        & > div {
+          display: flex;
+          gap: 36px;
+          i {
+            font-size: 26px;
+            &:nth-child(5) {
+              font-size: 24px;
+              margin-right: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

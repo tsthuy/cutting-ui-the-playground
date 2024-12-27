@@ -1,0 +1,12 @@
+//abstracts
+@use "./abstracts/base";
+@use "./abstracts/functions";
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+//layout
+@use "./layout/header";
+//components
+@use "./components/content.scss";
+@use "./components/media.scss";
+@use "./components/contact.scss";
+@use "./layout/footer.scss";
