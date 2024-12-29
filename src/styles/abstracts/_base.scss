@@ -1,59 +1,237 @@
-* {
+@use "./mixins" as mixins;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 400; /* Default weight is Regular */
-  color: #333; /* Base text color */
+  font-weight: 400;
+  color: #333;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
   width: 1172px;
   margin-left: auto;
   margin-right: auto;
+  @include mixins.respond-to("lg") {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
+
 .bg-pink {
-  background-color: #f465d5;
+  background-color: var(--color-pink);
 }
+
 .bg-green {
-  background-color: #00b894;
+  background-color: var(--color-green);
 }
+
 .bg-blue {
-  background-color: #3498db;
+  background-color: var(--color-blue);
 }
+
 .bg-yellow {
-  background-color: #ffda7b;
+  background-color: var(--color-yellow);
 }
 .ml-10 {
   margin-left: 10px;
 }
+
 .blur-background {
   position: absolute;
-  bottom: 0; /* Đảm bảo lớp mờ chỉ nằm phía dưới */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%; /* Chiều cao chỉ chiếm nửa dưới */
+  height: 50%;
   background-size: cover;
   background-position: center;
-  filter: blur(40px); /* Làm mờ nhẹ hơn */
-  opacity: 0.3; /* Giảm độ rõ để tạo hiệu ứng nhẹ nhàng */
-  z-index: -1; /* Đặt lớp nền phía sau */
-  pointer-events: none; /* Đảm bảo không ảnh hưởng đến tương tác */
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
 }
+
 .circle {
   background-image: url("../../../assets/images/img1.png");
 }
+
 .cart {
   background-image: url("../../../assets/images/img2.png");
 }
+
 .tent {
   background-image: url("../../../assets/images/img3.png");
 }
+
 .cake {
   background-image: url("../../../assets/images/img4.png");
+}
+
+a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  &:hover {
+    color: #3498db;
+    cursor: pointer;
+  }
+}
+
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+}
+
+li {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  &:hover {
+    transform: translateY(2px);
+  }
+  a {
+    transition: color 0.3s ease;
+  }
+}
+
+button:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @font-face {

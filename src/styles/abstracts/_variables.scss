@@ -1,2 +1,15 @@
-$primary-color: #1a2b5f;
-$secondary-color: #ffda7b;
+$breakpoint-xs: 480px; // Mobile devices (portrait)
+$breakpoint-sm: 768px; // Tablet devices (portrait)
+$breakpoint-md: 1024px; // Medium devices (landscape tablets, small desktops)
+$breakpoint-lg: 1200px; // Large devices (larger desktops)
+$breakpoint-xl: 1440px; // Extra large devices (large desktops)
+
+:root {
+  --color-black: #000;
+  --primary-color: #1a2b5f;
+  --secondary-color: #ffda7b;
+  --color-pink: #f465d5;
+  --color-green: #00b894;
+  --color-blue: #3498db;
+  --color-yellow: #ffda7b;
+}

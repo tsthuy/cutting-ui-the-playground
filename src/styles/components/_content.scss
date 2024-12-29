@@ -8,14 +8,14 @@
   padding-top: 64px;
   padding-bottom: 72px;
   &__title h1 {
-    color: vars.$primary-color;
+    color: var(--primary-color);
     font-size: 72px;
     font-weight: bold;
   }
   &__sub__title {
     padding: 18px 0;
     p {
-      color: vars.$primary-color;
+      color: var(--primary-color);
       font-size: 24px;
       text-align: center;
     }
@@ -29,20 +29,20 @@
       text-align: center;
       align-items: center;
       padding: 14px 34px;
-      color: vars.$primary-color;
+      color: var(--primary-color);
       font-size: 16px;
       border-radius: 50px;
       font-weight: 500;
       font-size: 19px;
     }
-    .content__btn--primary {
-      background-color: vars.$secondary-color;
+    &--primary {
+      background-color: var(--secondary-color);
       border: none;
-      box-shadow: 0 30px 40px rgba(vars.$secondary-color, 0.6);
+      box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
     }
-    .content__btn--secondary {
+    &--secondary {
       background-color: transparent;
-      border: 1px solid vars.$primary-color;
+      border: 1px solid var(--primary-color);
     }
   }
   &__list {
@@ -74,9 +74,9 @@
           width: 100%;
           padding: 26px 0;
           margin-left: 13px;
-          h1 {
+          h2 {
             font-size: 26px;
-            color: vars.$primary-color;
+            color: var(--primary-color);
           }
           p {
             i {

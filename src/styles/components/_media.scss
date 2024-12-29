@@ -3,7 +3,7 @@
 .media {
   display: flex;
   flex-direction: column;
-  .media__cover {
+  &__cover {
     display: flex;
     gap: 98px;
 
@@ -17,13 +17,13 @@
     .media__content {
       padding: 82px 0;
       margin-left: 3px;
-      .media__content--header > p {
+      &--header > p {
         font-size: 38px;
         font-weight: 800;
         white-space: nowrap;
-        color: vars.$primary-color;
+        color: var(--primary-color);
       }
-      .media__content--main {
+      &--main {
         padding-top: 26px;
         padding-bottom: 40px;
         margin-right: 10px;
@@ -35,7 +35,7 @@
       .content--last {
         padding-bottom: 34px;
       }
-      .media__content--underline {
+      &--underline {
         h4 {
           // line-height: 33px;
           font-weight: bold;
@@ -59,16 +59,16 @@
           }
         }
       }
-      .media__content--btn {
+      &--btn {
         padding-top: 45px;
         button {
           padding: 15px 44px;
           border-radius: 30px;
           font-size: 18px;
           font-weight: 600;
-          color: vars.$primary-color;
-          background-color: vars.$secondary-color;
-          box-shadow: 0 30px 40px rgba(vars.$secondary-color, 0.6);
+          color: var(--primary-color);
+          background-color: var(--secondary-color);
+          box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
         }
       }
     }
@@ -81,7 +81,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        .media__cover--cicle {
+        .media__cover--circle {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -103,7 +103,7 @@
       gap: 64px;
       .media__content {
         padding: 88px 0;
-        .media__content--header--last {
+        &--header--last {
           font-size: 50px;
         }
         .media__content__row {
@@ -111,30 +111,30 @@
           display: flex;
           gap: 60px;
           padding-bottom: 48px;
-          .media__content__row--item {
+          &--item {
             max-width: 160px;
 
             p {
-              color: vars.$primary-color;
+              color: var(--primary-color);
             }
             a {
               font-weight: lighter;
-              color: vars.$primary-color;
+              color: var(--primary-color);
               font-size: 14px;
               margin-top: 5px;
             }
-            .media__content__row--item--icon {
+            &--icon {
               margin-bottom: 14px;
 
               i {
-                background-color: vars.$secondary-color;
+                background-color: var(--secondary-color);
                 border-radius: 5px;
                 padding: 8px;
                 font-size: 26px;
                 color: #001f5b;
               }
             }
-            .media__content__row--item--sub--cover {
+            &--sub--cover {
               padding-top: 5px;
             }
           }
