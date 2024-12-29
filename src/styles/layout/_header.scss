@@ -1,9 +1,14 @@
+@use "../abstracts/mixins";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 114px;
 
+  @include mixins.for-medium {
+    justify-content: space-around;
+  }
   .nav {
     margin-bottom: 13px;
 

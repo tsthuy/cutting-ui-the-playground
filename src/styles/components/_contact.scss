@@ -5,12 +5,21 @@
   flex-direction: column;
   border-bottom: 4px solid var(--primary-color);
   padding-bottom: 84.5px;
+
+  @include mixins.for-medium {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   &--infor {
     width: 826px;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 64px;
     border-bottom: 2px solid var(--primary-color);
+
+    @include mixins.for-medium {
+      width: 70%;
+    }
     p {
       color: var(--primary-color);
       font-size: 28px;
@@ -24,6 +33,12 @@
     justify-content: flex-start;
     gap: 103px;
     padding-top: 64px;
+
+    @include mixins.for-medium {
+      width: 100%;
+      justify-content: space-around;
+      gap: 28px;
+    }
   }
   &__playground {
     padding-top: 175px;
@@ -56,6 +71,11 @@
         width: 230px;
       }
     }
+
+    @include mixins.for-medium {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__form {
     padding-top: 170px;
@@ -66,6 +86,10 @@
 
       @include mixins.for-large {
         width: 48%;
+      }
+
+      @include mixins.for-medium {
+        width: 45%;
       }
       h2 {
         font-weight: 900;
@@ -79,6 +103,10 @@
 
       @include mixins.for-large {
         width: 45%;
+      }
+
+      @include mixins.for-medium {
+        width: 40%;
       }
       &--cover {
         position: relative;

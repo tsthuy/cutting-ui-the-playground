@@ -12,14 +12,32 @@
     }
     &:nth-child(even) {
       flex-direction: row-reverse;
+
+      @include mixins.for-medium {
+        flex-direction: column;
+      }
     }
 
     &:nth-child(odd) {
       flex-direction: row;
+
+      @include mixins.for-medium {
+        flex-direction: column;
+      }
+    }
+
+    @include mixins.for-medium {
+      justify-content: center;
+      align-items: center;
     }
     .media__content {
       padding: 82px 0;
       margin-left: 3px;
+      &--header {
+        @include mixins.for-medium {
+          text-align: center;
+        }
+      }
       &--header > p {
         font-size: 38px;
         font-weight: 800;
@@ -30,6 +48,12 @@
           white-space: unset;
         }
       }
+      @include mixins.for-medium {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
       &--main {
         padding-top: 26px;
         padding-bottom: 40px;
@@ -37,6 +61,13 @@
         a {
           white-space: nowrap;
           line-height: 1.7;
+        }
+
+        @include mixins.for-medium {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
       }
       .content--last {

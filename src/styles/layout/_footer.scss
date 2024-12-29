@@ -1,9 +1,13 @@
-@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
 
 .footer {
   padding-top: 56px;
   padding-bottom: 188px;
 
+  @include mixins.for-medium {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   &__cover {
     display: flex;
 
@@ -14,6 +18,10 @@
     .footer__content--cover {
       &:first-child {
         width: 309px;
+
+        @include mixins.for-medium {
+          width: unset;
+        }
       }
 
       display: flex;
@@ -30,11 +38,24 @@
     }
     .footer__content--cover--first {
       width: 306px;
+
+      @include mixins.for-medium {
+        width: unset;
+      }
     }
     .footer__content--cover--center {
       width: 306px;
+
+      @include mixins.for-medium {
+        width: unset;
+      }
+    }
+
+    @include mixins.for-medium {
+      justify-content: space-around;
     }
   }
+
   &__term {
     padding-top: 190px;
 
