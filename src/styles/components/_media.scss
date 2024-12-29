@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
 
 .media {
   display: flex;
@@ -7,6 +7,9 @@
     display: flex;
     gap: 98px;
 
+    @include mixins.for-large {
+      gap: 40px;
+    }
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -22,6 +25,10 @@
         font-weight: 800;
         white-space: nowrap;
         color: var(--primary-color);
+
+        @include mixins.for-large {
+          white-space: unset;
+        }
       }
       &--main {
         padding-top: 26px;
@@ -75,6 +82,10 @@
     &:nth-child(2) {
       img {
         height: 100%;
+
+        @include mixins.for-large {
+          width: 540px;
+        }
       }
       padding-top: 135px;
       .media__content--no--underline {
@@ -101,6 +112,12 @@
     &:nth-child(3) {
       padding-top: 150px;
       gap: 64px;
+
+      img {
+        @include mixins.for-large {
+          width: 540px;
+        }
+      }
       .media__content {
         padding: 88px 0;
         &--header--last {

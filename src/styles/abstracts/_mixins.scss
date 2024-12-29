@@ -1,24 +1,30 @@
-@use "./variables" as vars;
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == "xs" {
-    @media (max-width: vars.$breakpoint-xs) {
-      @content;
-    }
-  } @else if $breakpoint == "sm" {
-    @media (max-width: vars.$breakpoint-sm) {
-      @content;
-    }
-  } @else if $breakpoint == "md" {
-    @media (max-width: vars.$breakpoint-md) {
-      @content;
-    }
-  } @else if $breakpoint == "lg" {
-    @media (max-width: vars.$breakpoint-lg) {
-      @content;
-    }
-  } @else if $breakpoint == "xl" {
-    @media (max-width: vars.$breakpoint-xl) {
-      @content;
-    }
+@use "variables" as v;
+@mixin for-mobile {
+  @media (max-width: #{v.$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: #{v.$breakpoint-mobile + 1}) and (max-width: #{v.$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin for-medium {
+  @media (min-width: #{v.$breakpoint-tablet + 1}) and (max-width: #{v.$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin for-large {
+  @media (min-width: #{v.$breakpoint-medium + 1}) and (max-width: #{v.$breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin for-extra-large {
+  @media (min-width: #{v.$breakpoint-large + 1}) {
+    @content;
   }
 }

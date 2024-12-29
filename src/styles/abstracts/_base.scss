@@ -1,4 +1,4 @@
-@use "./mixins" as mixins;
+@use "./mixins";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -147,9 +147,11 @@ body {
   width: 1172px;
   margin-left: auto;
   margin-right: auto;
-  @include mixins.respond-to("lg") {
+
+  @include mixins.for-large {
     width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
   }
 }
 

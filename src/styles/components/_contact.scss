@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
 .contact {
   padding-top: 44px;
   display: flex;
@@ -49,6 +49,13 @@
     padding-top: 56px;
     display: flex;
     gap: 30px;
+
+    @include mixins.for-large {
+      justify-content: space-around;
+      img {
+        width: 230px;
+      }
+    }
   }
   &__form {
     padding-top: 170px;
@@ -56,6 +63,10 @@
     &--title {
       width: 556px;
       color: var(--primary-color);
+
+      @include mixins.for-large {
+        width: 48%;
+      }
       h2 {
         font-weight: 900;
         font-size: 28px;
@@ -65,6 +76,10 @@
     }
     &--subscribe {
       width: 620px;
+
+      @include mixins.for-large {
+        width: 45%;
+      }
       &--cover {
         position: relative;
       }

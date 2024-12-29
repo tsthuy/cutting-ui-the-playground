@@ -1,8 +1,7 @@
-$breakpoint-xs: 480px; // Mobile devices (portrait)
-$breakpoint-sm: 768px; // Tablet devices (portrait)
-$breakpoint-md: 1024px; // Medium devices (landscape tablets, small desktops)
-$breakpoint-lg: 1200px; // Large devices (larger desktops)
-$breakpoint-xl: 1440px; // Extra large devices (large desktops)
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1200px;
 
 :root {
   --color-black: #000;
