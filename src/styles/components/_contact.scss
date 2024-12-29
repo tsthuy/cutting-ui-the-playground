@@ -10,6 +10,11 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  @include mixins.for-mobile {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   &--infor {
     width: 826px;
     margin: 0 auto;
@@ -19,6 +24,10 @@
 
     @include mixins.for-medium {
       width: 70%;
+    }
+
+    @include mixins.for-mobile {
+      width: unset;
     }
     p {
       color: var(--primary-color);
@@ -38,6 +47,13 @@
       width: 100%;
       justify-content: space-around;
       gap: 28px;
+    }
+
+    @include mixins.for-mobile {
+      width: unset;
+      gap: 20px;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
   }
   &__playground {
@@ -76,6 +92,11 @@
       flex-wrap: wrap;
       justify-content: space-around;
     }
+
+    @include mixins.for-mobile {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__form {
     padding-top: 170px;
@@ -91,11 +112,19 @@
       @include mixins.for-medium {
         width: 45%;
       }
+
+      @include mixins.for-mobile {
+        width: unset;
+      }
       h2 {
         font-weight: 900;
         font-size: 28px;
         line-height: 1.45;
         letter-spacing: 0.35px;
+
+        @include mixins.for-mobile {
+          font-size: 1rem;
+        }
       }
     }
     &--subscribe {
@@ -107,6 +136,11 @@
 
       @include mixins.for-medium {
         width: 40%;
+      }
+
+      @include mixins.for-mobile {
+        width: unset;
+        padding-top: 20px;
       }
       &--cover {
         position: relative;
@@ -120,6 +154,11 @@
         letter-spacing: 0.3px;
         background-color: #f2f1f6;
         border: none;
+
+        @include mixins.for-mobile {
+          padding-left: 10px;
+          padding-right: 0;
+        }
       }
       span {
         position: absolute;
@@ -130,6 +169,10 @@
         color: var(--primary-color);
         font-size: 14px;
         font-weight: bold;
+
+        @include mixins.for-mobile {
+          right: -5px;
+        }
       }
       &--icon {
         padding-left: 38px;
@@ -146,6 +189,12 @@
           }
         }
       }
+    }
+    @include mixins.for-mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 60px;
     }
   }
 }

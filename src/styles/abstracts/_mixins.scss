@@ -5,14 +5,8 @@
   }
 }
 
-@mixin for-tablet {
-  @media (min-width: #{v.$breakpoint-mobile + 1}) and (max-width: #{v.$breakpoint-tablet}) {
-    @content;
-  }
-}
-
 @mixin for-medium {
-  @media (min-width: #{v.$breakpoint-tablet + 1}) and (max-width: #{v.$breakpoint-medium}) {
+  @media (min-width: #{v.$breakpoint-mobile + 1}) and (max-width: #{v.$breakpoint-medium}) {
     @content;
   }
 }

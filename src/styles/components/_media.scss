@@ -16,6 +16,10 @@
       @include mixins.for-medium {
         flex-direction: column;
       }
+
+      @include mixins.for-mobile {
+        flex-direction: column;
+      }
     }
 
     &:nth-child(odd) {
@@ -24,15 +28,40 @@
       @include mixins.for-medium {
         flex-direction: column;
       }
+
+      @include mixins.for-mobile {
+        flex-direction: column;
+      }
     }
 
     @include mixins.for-medium {
       justify-content: center;
       align-items: center;
     }
+
+    @include mixins.for-mobile {
+      gap: unset;
+    }
+    .media__thumbnail {
+      div {
+        @include mixins.for-mobile {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      img {
+        @include mixins.for-mobile {
+          width: 80%;
+        }
+      }
+    }
     .media__content {
       padding: 82px 0;
       margin-left: 3px;
+
+      @include mixins.for-mobile {
+        padding: 20px 0;
+      }
       &--header {
         @include mixins.for-medium {
           text-align: center;
@@ -46,6 +75,11 @@
 
         @include mixins.for-large {
           white-space: unset;
+        }
+
+        @include mixins.for-mobile {
+          white-space: unset;
+          font-size: 1.8rem;
         }
       }
       @include mixins.for-medium {
@@ -109,16 +143,23 @@
           box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
         }
       }
+
+      @include mixins.for-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
     }
     &:nth-child(2) {
       img {
-        height: 100%;
-
         @include mixins.for-large {
           width: 540px;
         }
       }
       padding-top: 135px;
+
       .media__content--no--underline {
         display: flex;
         flex-direction: column;
@@ -187,6 +228,14 @@
             }
           }
         }
+
+        @include mixins.for-mobile {
+          padding: 0;
+        }
+      }
+
+      @include mixins.for-mobile {
+        gap: unset;
       }
     }
   }

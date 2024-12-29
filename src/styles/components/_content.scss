@@ -13,6 +13,15 @@
     color: var(--primary-color);
     font-size: 72px;
     font-weight: bold;
+
+    @include mixins.for-medium {
+      text-align: center;
+    }
+
+    @include mixins.for-mobile {
+      font-size: 36px;
+      text-align: center;
+    }
   }
   &__sub__title {
     padding: 18px 0;
@@ -20,6 +29,11 @@
       color: var(--primary-color);
       font-size: 24px;
       text-align: center;
+
+      @include mixins.for-mobile {
+        font-size: unset;
+        font-size: 1rem;
+      }
     }
   }
   &__btn {
@@ -61,6 +75,14 @@
     @include mixins.for-medium {
       flex-wrap: wrap;
       justify-content: space-around;
+    }
+
+    @include mixins.for-mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 50px;
     }
     &__card {
       position: relative;

@@ -140,7 +140,7 @@ body {
   font-weight: 400;
   color: #333;
   width: 100%;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -157,6 +157,12 @@ body {
   @include mixins.for-medium {
     width: 100%;
     margin: 0 auto;
+  }
+
+  @include mixins.for-mobile {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4px;
   }
 }
 

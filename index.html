@@ -26,6 +26,10 @@
             <li><a href="#">Log in</a></li>
           </ul>
         </div>
+        <div class="header--bar">
+          <i class="fas fa-bars"></i>
+
+        </div>
       </header>
 
       <div class="content">
@@ -166,7 +170,9 @@
         </div>
         <div class="media__cover">
           <div class="media__thumbnail">
+            <div class="">
             <img src="./assets/images/img7.png" alt="" />
+            </div>
           </div>
           <div class="media__content">
             <div class="media__content--header">
@@ -318,4 +324,13 @@
       </div>
     </div>
   </body>
+  <script>
+  const bar = document.querySelector('.header--bar');
+  const navList = document.querySelector('.nav__list');
+
+  bar.addEventListener('click', () => {
+  navList.classList.toggle('active'); 
+  });
+
+  </script>
 </html>
