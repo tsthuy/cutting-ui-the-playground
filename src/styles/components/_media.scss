@@ -66,6 +66,10 @@
         @include mixins.for-medium {
           text-align: center;
         }
+
+        @include mixins.for-mobile {
+          padding-top: 10px;
+        }
       }
       &--header > p {
         font-size: 39px;
@@ -80,7 +84,8 @@
 
         @include mixins.for-mobile {
           white-space: unset;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
+          line-height: 1;
         }
       }
       @include mixins.for-medium {
@@ -96,6 +101,10 @@
         a {
           white-space: nowrap;
           line-height: 1.7;
+
+          @include mixins.for-mobile {
+            white-space: unset;
+          }
         }
 
         @include mixins.for-medium {
@@ -130,6 +139,10 @@
             text-decoration-thickness: 1.2px;
             text-underline-offset: 4px;
           }
+        }
+
+        @include mixins.for-mobile {
+          padding: 0 4px;
         }
       }
       &--btn {
@@ -196,6 +209,11 @@
         &--header--last {
           font-size: 50px;
           line-height: 73px;
+
+          @include mixins.for-mobile {
+            font-size: 1.6rem;
+            line-height: 1;
+          }
         }
         .media__content__row {
           margin-left: 2px;
