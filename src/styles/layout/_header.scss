@@ -50,6 +50,10 @@
         font-weight: 500;
         padding: 10px 26px;
         border-radius: 25px;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
       }
     }
 

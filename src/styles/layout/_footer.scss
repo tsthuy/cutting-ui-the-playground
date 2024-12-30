@@ -15,9 +15,16 @@
   }
   &__cover {
     display: flex;
+    gap: 56px;
+    div {
+      width: calc(100% / 4);
 
+      @include mixins.for-mobile {
+        width: unset;
+      }
+    }
     &--img {
-      width: 309px;
+      // width: 309px;
 
       @include mixins.for-medium {
         width: unset;
@@ -30,7 +37,7 @@
 
     .footer__content--cover {
       &:first-child {
-        width: 309px;
+        // width: 309px;
 
         @include mixins.for-medium {
           width: unset;
@@ -43,14 +50,18 @@
 
       display: flex;
       flex-direction: column;
-      gap: 19px;
-      padding-top: 8px;
+      gap: 27px;
+      padding-top: 11px;
 
       a {
         text-decoration: none;
         letter-spacing: 0.25px;
         color: var(--primary-color);
         font-weight: 500;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
       }
 
       @include mixins.for-mobile {
@@ -60,7 +71,7 @@
       }
     }
     .footer__content--cover--first {
-      width: 306px;
+      // width: 306px;
 
       @include mixins.for-medium {
         width: unset;
@@ -71,7 +82,7 @@
       }
     }
     .footer__content--cover--center {
-      width: 306px;
+      // width: 306px;
 
       @include mixins.for-medium {
         width: unset;
@@ -92,7 +103,7 @@
   }
 
   &__term {
-    padding-top: 190px;
+    padding-top: 194px;
 
     @include mixins.for-mobile {
       padding-top: 30px;
@@ -101,7 +112,7 @@
       width: 100%;
       display: flex;
       border-top: 3px solid #ccc;
-      padding-top: 18px;
+      padding-top: 22px;
       display: flex;
       justify-content: space-between;
 
@@ -109,6 +120,10 @@
         font-size: 12px;
         text-decoration: none;
         color: var(--primary-color);
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       div {
@@ -117,6 +132,7 @@
           display: flex;
           gap: 18px;
         }
+
         &:nth-child(2) {
           padding-top: 1px;
           padding-right: 4px;

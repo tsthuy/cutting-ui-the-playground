@@ -1,6 +1,6 @@
 @use "../abstracts/mixins";
 .contact {
-  padding-top: 44px;
+  padding-top: 54px;
   display: flex;
   flex-direction: column;
   border-bottom: 4px solid var(--primary-color);
@@ -16,15 +16,10 @@
     margin-right: 5px;
   }
   &--infor {
-    width: 826px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
-    padding-bottom: 64px;
+    padding-bottom: 70px;
     border-bottom: 2px solid var(--primary-color);
-
-    @include mixins.for-medium {
-      width: 70%;
-    }
 
     @include mixins.for-mobile {
       width: unset;
@@ -36,7 +31,6 @@
     }
   }
   &--logo {
-    width: 778px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -57,7 +51,7 @@
     }
   }
   &__playground {
-    padding-top: 175px;
+    padding-top: 190px;
     &--infor {
       text-align: center;
       h2 {
@@ -66,7 +60,7 @@
         letter-spacing: 0.4px;
       }
       & > div {
-        padding-top: 20px;
+        padding-top: 34px;
         letter-spacing: 0.2px;
 
         font-size: 24px;
@@ -77,7 +71,7 @@
     }
   }
   &__slider {
-    padding-top: 56px;
+    padding-top: 62px;
     display: flex;
     gap: 30px;
 
@@ -99,10 +93,10 @@
     }
   }
   &__form {
-    padding-top: 170px;
+    padding-top: 176px;
     display: flex;
     &--title {
-      width: 556px;
+      width: 47.3%;
       color: var(--primary-color);
 
       @include mixins.for-large {
@@ -123,12 +117,13 @@
         letter-spacing: 0.35px;
 
         @include mixins.for-mobile {
+          text-align: center;
           font-size: 1rem;
         }
       }
     }
     &--subscribe {
-      width: 620px;
+      width: calc(100% - 48%);
 
       @include mixins.for-large {
         width: 45%;
@@ -146,7 +141,7 @@
         position: relative;
       }
       input {
-        width: 100%;
+        width: 92%;
         height: 62px;
         line-height: 64px;
         padding: 0 26px;
@@ -158,17 +153,22 @@
         @include mixins.for-mobile {
           padding-left: 10px;
           padding-right: 0;
+          width: 100%;
         }
       }
       span {
         position: absolute;
         top: 51%;
-        right: 25px;
+        right: 16px;
         transform: translateY(-50%);
         cursor: pointer;
         color: var(--primary-color);
         font-size: 14px;
         font-weight: bold;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
 
         @include mixins.for-mobile {
           right: -5px;
@@ -182,6 +182,11 @@
           gap: 36px;
           i {
             font-size: 26px;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--secondary-color);
+            }
             &:nth-child(5) {
               font-size: 24px;
               margin-right: 12px;
