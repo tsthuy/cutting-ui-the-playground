@@ -120,7 +120,7 @@
         font-weight: 900;
         font-size: 28px;
         line-height: 1.45;
-        letter-spacing: 0.35px;
+        letter-spacing: 0;
 
         @include mixins.for-mobile {
           text-align: center;
