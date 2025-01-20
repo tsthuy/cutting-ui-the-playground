@@ -7,13 +7,14 @@
   height: 114px;
 
   @include mixins.for-large {
-    padding: 0 20px;
+    padding: 0 1%;
   }
 
   @include mixins.for-medium {
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
   }
+
   @include mixins.for-mobile {
     padding: 0 20px;
     height: 80px;
@@ -27,8 +28,13 @@
 
       &:nth-child(3) {
         margin-right: 30px;
+
         @include mixins.for-mobile {
           margin: 0;
+        }
+
+        @include mixins.for-medium {
+          width: unset;
         }
       }
 
@@ -36,6 +42,10 @@
         margin-right: 18px;
         @include mixins.for-mobile {
           margin: 0;
+        }
+
+        @include mixins.for-medium {
+          width: unset;
         }
       }
 
@@ -88,6 +98,10 @@
       }
       &.active {
         display: flex;
+      }
+
+      @include mixins.for-medium {
+        margin: unset;
       }
     }
   }

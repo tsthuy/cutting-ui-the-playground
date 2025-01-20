@@ -407,12 +407,12 @@ button:hover {
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   .header {
-    padding: 0 20px;
+    padding: 0 1%;
   }
 }
 @media (min-width: 701px) and (max-width: 1024px) {
   .header {
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
   }
 }
@@ -437,12 +437,22 @@ button:hover {
     margin: 0;
   }
 }
+@media (min-width: 701px) and (max-width: 1024px) {
+  .header .nav__list li:nth-child(3) {
+    width: unset;
+  }
+}
 .header .nav__list li:nth-child(1) {
   margin-right: 18px;
 }
 @media (max-width: 700px) {
   .header .nav__list li:nth-child(1) {
     margin: 0;
+  }
+}
+@media (min-width: 701px) and (max-width: 1024px) {
+  .header .nav__list li:nth-child(1) {
+    width: unset;
   }
 }
 .header .nav__list li:nth-child(4) a {
@@ -491,6 +501,11 @@ button:hover {
 }
 .header .nav__list.active {
   display: flex;
+}
+@media (min-width: 701px) and (max-width: 1024px) {
+  .header .nav__list {
+    margin: unset;
+  }
 }
 .header--bar {
   font-size: 28px;
