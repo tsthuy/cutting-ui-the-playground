@@ -19,6 +19,7 @@
     padding: 0 20px;
     height: 80px;
   }
+
   .nav {
     margin-bottom: 13px;
 
@@ -89,13 +90,16 @@
         gap: 10px;
         border: 0.1px solid #e5e5e5;
         text-align: center;
+
         li a {
           color: var(--primary-color);
+
           &:hover {
             color: var(--secondary-color);
           }
         }
       }
+
       &.active {
         display: flex;
       }
@@ -105,6 +109,7 @@
       }
     }
   }
+
   &--bar {
     font-size: 28px;
     display: none;

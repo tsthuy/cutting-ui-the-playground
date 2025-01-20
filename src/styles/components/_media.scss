@@ -3,6 +3,7 @@
 .media {
   display: flex;
   flex-direction: column;
+
   &__cover {
     display: flex;
     gap: 98px;
@@ -10,6 +11,7 @@
     @include mixins.for-large {
       gap: 40px;
     }
+
     &:nth-child(even) {
       flex-direction: row-reverse;
 
@@ -42,6 +44,7 @@
     @include mixins.for-mobile {
       gap: unset;
     }
+
     .media__thumbnail {
       div {
         @include mixins.for-mobile {
@@ -49,12 +52,14 @@
           justify-content: center;
         }
       }
+
       img {
         @include mixins.for-mobile {
           width: 80%;
         }
       }
     }
+
     .media__content {
       padding: 86px 0;
       margin-left: 3px;
@@ -62,6 +67,7 @@
       @include mixins.for-mobile {
         padding: 20px 0;
       }
+
       &--header {
         @include mixins.for-medium {
           text-align: center;
@@ -71,6 +77,7 @@
           padding-top: 10px;
         }
       }
+
       &--header > p {
         font-size: 39px;
         font-weight: 800;
@@ -89,16 +96,19 @@
           line-height: 1;
         }
       }
+
       @include mixins.for-medium {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
+
       &--main {
         padding-top: 26px;
         padding-bottom: 40px;
         margin-right: 10px;
+
         a {
           white-space: nowrap;
           line-height: 1.7;
@@ -115,27 +125,31 @@
           align-items: center;
         }
       }
+
       .content--last {
         padding-bottom: 34px;
       }
+
       &--underline {
         p {
-          // line-height: 33px;
           font-weight: bold;
           text-decoration: underline;
           text-decoration-thickness: 2px;
           text-underline-offset: 8px;
           line-height: 1.6;
           color: #001f5b;
+
           &:nth-child(2) {
             margin-top: 2px;
             text-underline-offset: 12px;
             text-decoration-thickness: 1.2px;
           }
+
           &:nth-child(3) {
             padding: 36px 0;
             letter-spacing: -0.1px;
           }
+
           &:nth-child(4) {
             text-decoration-thickness: 1.2px;
             text-underline-offset: 7px;
@@ -147,8 +161,10 @@
           padding: 0 4px;
         }
       }
+
       &--btn {
         padding-top: 48px;
+
         button {
           padding: 15px 44px;
           border-radius: 30px;
@@ -168,35 +184,37 @@
         text-align: center;
       }
     }
+
     &:nth-child(2) {
       img {
         @include mixins.for-large {
           width: 540px;
         }
       }
+
       padding-top: 138px;
 
       .media__content--no--underline {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         .media__cover--circle {
           display: flex;
           justify-content: center;
           align-items: center;
           padding-bottom: 34px;
           gap: 14px;
+
           .media--circle {
             width: 24px;
             height: 24px;
             border-radius: 50%;
           }
-          h4 {
-            // letter-spacing: 0.19px;
-          }
         }
       }
     }
+
     &:nth-child(3) {
       padding-top: 159px;
       gap: 64px;
@@ -206,8 +224,10 @@
           width: 540px;
         }
       }
+
       .media__content {
         padding: 88px 0;
+
         &--header--last {
           font-size: 50px;
           line-height: 73px;
@@ -217,23 +237,27 @@
             line-height: 1;
           }
         }
+
         .media__content__row {
           margin-left: 2px;
           display: flex;
           gap: 60px;
           padding-bottom: 46px;
+
           &--item {
             max-width: 160px;
 
             p {
               color: var(--primary-color);
             }
+
             a {
               font-weight: lighter;
               color: var(--primary-color);
               font-size: 14px;
               margin-top: 5px;
             }
+
             &--icon {
               margin-bottom: 14px;
 
@@ -245,8 +269,10 @@
                 color: #001f5b;
               }
             }
+
             &--sub--cover {
               padding-top: 9px;
+
               a {
                 line-height: 22px;
               }

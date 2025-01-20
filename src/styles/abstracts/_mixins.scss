@@ -1,4 +1,5 @@
 @use "variables" as v;
+
 @mixin for-mobile {
   @media (max-width: #{v.$breakpoint-mobile}) {
     @content;

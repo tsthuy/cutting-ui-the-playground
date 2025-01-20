@@ -1,4 +1,5 @@
 @use "../abstracts/mixins";
+
 .contact {
   padding-top: 54px;
   display: flex;
@@ -17,6 +18,7 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
   &--infor {
     width: 70%;
     text-align: center;
@@ -28,12 +30,14 @@
     @include mixins.for-mobile {
       width: unset;
     }
+
     p {
       color: var(--primary-color);
       font-size: 28px;
       font-weight: bold;
     }
   }
+
   &--logo {
     margin: 0 auto;
     display: flex;
@@ -54,26 +58,31 @@
       flex-wrap: wrap;
     }
   }
+
   &__playground {
     padding-top: 190px;
+
     &--infor {
       text-align: center;
+
       h2 {
         color: var(--primary-color);
         font-size: 38px;
         letter-spacing: 0.4px;
       }
+
       & > div {
         padding-top: 34px;
         letter-spacing: 0.2px;
-
         font-size: 24px;
+
         a {
           color: var(--secondary-color);
         }
       }
     }
   }
+
   &__slider {
     padding-top: 62px;
     display: flex;
@@ -81,6 +90,7 @@
 
     @include mixins.for-large {
       justify-content: space-around;
+
       img {
         width: 230px;
       }
@@ -116,6 +126,7 @@
       @include mixins.for-mobile {
         width: unset;
       }
+
       h2 {
         font-weight: 900;
         font-size: 28px;
@@ -143,9 +154,11 @@
         width: unset;
         padding-top: 20px;
       }
+
       &--cover {
         position: relative;
       }
+
       input {
         width: 92%;
         height: 62px;
@@ -183,9 +196,11 @@
       &--icon {
         padding-left: 38px;
         padding-top: 44px;
+
         & > div {
           display: flex;
           gap: 36px;
+
           i {
             font-size: 26px;
             cursor: pointer;
@@ -193,6 +208,7 @@
             &:hover {
               color: var(--secondary-color);
             }
+
             &:nth-child(5) {
               font-size: 24px;
               margin-right: 12px;
@@ -201,6 +217,7 @@
         }
       }
     }
+
     @include mixins.for-mobile {
       flex-direction: column;
       justify-content: center;
