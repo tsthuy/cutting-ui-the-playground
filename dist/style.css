@@ -1055,6 +1055,7 @@ button:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
+  border: none;
 }
 @media (max-width: 700px) {
   .media__cover .media__content {
