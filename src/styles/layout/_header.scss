@@ -22,14 +22,26 @@
 
   .nav {
     margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      padding: 11px 28px;
+      border-radius: 30px;
+      outline: none;
+      border: 1px solid black;
+      background: transparent;
+      font-size: 16.5px;
+      color: var(--primary-color);
 
+      @include mixins.for-mobile {
+        display: none;
+      }
+    }
     &__list li {
-      width: 100.1px;
       display: inline-block;
 
       &:nth-child(3) {
-        margin-right: 30px;
-
         @include mixins.for-mobile {
           margin: 0;
         }
@@ -38,9 +50,22 @@
           width: unset;
         }
       }
+      &:nth-child(2) {
+        margin-left: 45px;
+        margin-right: 47px;
+      }
 
       &:nth-child(1) {
-        margin-right: 18px;
+        span {
+          margin-right: 1px;
+        }
+        .down-icon {
+          font-size: 17px;
+
+          @include mixins.for-mobile {
+            display: none;
+          }
+        }
         @include mixins.for-mobile {
           margin: 0;
         }
@@ -61,10 +86,9 @@
 
       a {
         text-decoration: none;
-        color: #333;
+        color: var(--primary-color);
         font-size: 16px;
         font-weight: 500;
-        padding: 10px 26px;
         border-radius: 25px;
 
         &:hover {
@@ -74,6 +98,7 @@
     }
 
     &__list {
+      margin-right: 70px;
       @include mixins.for-mobile {
         width: 30%;
         display: none;
@@ -105,7 +130,14 @@
       }
 
       @include mixins.for-medium {
-        margin: unset;
+        margin: 30px;
+      }
+
+      &--icon--mobile {
+        display: none !important;
+        @include mixins.for-mobile {
+          display: block !important;
+        }
       }
     }
   }

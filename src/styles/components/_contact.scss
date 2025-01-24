@@ -189,8 +189,12 @@
           color: var(--secondary-color);
         }
 
+        @include mixins.for-medium {
+          right: 2%;
+        }
+
         @include mixins.for-mobile {
-          right: -5px;
+          right: 1%;
         }
       }
       &--icon {

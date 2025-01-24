@@ -424,13 +424,26 @@ button:hover {
 }
 .header .nav {
   margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav button {
+  padding: 11px 28px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid black;
+  background: transparent;
+  font-size: 16.5px;
+  color: var(--primary-color);
+}
+@media (max-width: 700px) {
+  .header .nav button {
+    display: none;
+  }
 }
 .header .nav__list li {
-  width: 100.1px;
   display: inline-block;
-}
-.header .nav__list li:nth-child(3) {
-  margin-right: 30px;
 }
 @media (max-width: 700px) {
   .header .nav__list li:nth-child(3) {
@@ -442,8 +455,20 @@ button:hover {
     width: unset;
   }
 }
-.header .nav__list li:nth-child(1) {
-  margin-right: 18px;
+.header .nav__list li:nth-child(2) {
+  margin-left: 45px;
+  margin-right: 47px;
+}
+.header .nav__list li:nth-child(1) span {
+  margin-right: 1px;
+}
+.header .nav__list li:nth-child(1) .down-icon {
+  font-size: 17px;
+}
+@media (max-width: 700px) {
+  .header .nav__list li:nth-child(1) .down-icon {
+    display: none;
+  }
 }
 @media (max-width: 700px) {
   .header .nav__list li:nth-child(1) {
@@ -465,14 +490,16 @@ button:hover {
 }
 .header .nav__list li a {
   text-decoration: none;
-  color: #333;
+  color: var(--primary-color);
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 26px;
   border-radius: 25px;
 }
 .header .nav__list li a:hover {
   color: var(--secondary-color);
+}
+.header .nav__list {
+  margin-right: 70px;
 }
 @media (max-width: 700px) {
   .header .nav__list {
@@ -504,7 +531,15 @@ button:hover {
 }
 @media (min-width: 701px) and (max-width: 1024px) {
   .header .nav__list {
-    margin: unset;
+    margin: 30px;
+  }
+}
+.header .nav__list--icon--mobile {
+  display: none !important;
+}
+@media (max-width: 700px) {
+  .header .nav__list--icon--mobile {
+    display: block !important;
   }
 }
 .header--bar {
@@ -712,9 +747,14 @@ button:hover {
 .contact__form--subscribe span:hover {
   color: var(--secondary-color);
 }
+@media (min-width: 701px) and (max-width: 1024px) {
+  .contact__form--subscribe span {
+    right: 2%;
+  }
+}
 @media (max-width: 700px) {
   .contact__form--subscribe span {
-    right: -5px;
+    right: 1%;
   }
 }
 .contact__form--subscribe--icon {
