@@ -197,6 +197,10 @@ body {
   margin-left: 10px;
 }
 
+.mll-10 {
+  margin-left: -10px;
+}
+
 .blur-background {
   position: absolute;
   bottom: 0;
@@ -832,7 +836,7 @@ button:hover {
 .content__btn {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 22px;
 }
 .content__btn button {
   text-align: center;
@@ -843,15 +847,19 @@ button:hover {
   border-radius: 50px;
   font-weight: 500;
   font-size: 19px;
+  letter-spacing: 0.3px;
 }
 .content__btn--primary {
   background-color: var(--secondary-color);
   border: none;
-  box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
+  box-shadow: 0 30px 40px rgba(255, 218, 123, 0.6);
+  font-size: 18px;
+  padding: 16px 36px;
 }
 .content__btn--secondary {
   background-color: transparent;
   border: 1px solid var(--primary-color);
+  padding: 14px 33px !important;
 }
 .content__list {
   width: 100%;

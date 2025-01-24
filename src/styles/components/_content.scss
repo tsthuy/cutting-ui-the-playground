@@ -46,7 +46,7 @@
   &__btn {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 22px;
 
     button {
       text-align: center;
@@ -57,17 +57,21 @@
       border-radius: 50px;
       font-weight: 500;
       font-size: 19px;
+      letter-spacing: 0.3px;
     }
 
     &--primary {
       background-color: var(--secondary-color);
       border: none;
-      box-shadow: 0 30px 40px rgba(var(--secondary-color), 0.6);
+      box-shadow: 0 30px 40px rgba(#ffda7b, 0.6);
+      font-size: 18px;
+      padding: 16px 36px;
     }
 
     &--secondary {
       background-color: transparent;
       border: 1px solid var(--primary-color);
+      padding: 14px 33px !important;
     }
   }
 
