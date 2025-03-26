@@ -101,8 +101,8 @@ img {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+  transform: scale(1.04);
+  filter: brightness(1.04);
 }
 
 li {
@@ -581,6 +581,9 @@ button:hover {
 .contact__form--subscribe--cover {
   position: relative;
 }
+.contact__form--subscribe--cover button:hover {
+  color: var(--color-pink) !important;
+}
 .contact__form--subscribe input {
   width: 92%;
   height: 62px;
@@ -845,14 +848,14 @@ button:hover {
   }
 }
 @media (max-width: 700px) {
-  .media__cover .media__thumbnail div {
+  .media__cover .media__thumbnail figure {
     display: flex;
     justify-content: center;
   }
 }
 @media (max-width: 700px) {
   .media__cover .media__thumbnail img {
-    width: 80%;
+    width: 60%;
   }
 }
 .media__cover .media__content {
@@ -875,6 +878,7 @@ button:hover {
   }
 }
 .media__cover .media__content--header > h2 {
+  padding-top: 10px;
   font-size: 39px;
   font-weight: 800;
   white-space: nowrap;
@@ -1014,6 +1018,7 @@ button:hover {
   padding: 88px 0;
 }
 .media__cover:nth-child(3) .media__content--header--last {
+  padding-top: 20px;
   font-size: 50px;
   line-height: 73px;
 }
@@ -1068,6 +1073,7 @@ button:hover {
 @media (max-width: 700px) {
   .media__cover:nth-child(3) {
     gap: unset;
+    padding: 40px 0;
   }
 }
 

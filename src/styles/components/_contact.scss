@@ -157,6 +157,9 @@
 
       &--cover {
         position: relative;
+        button:hover {
+          color: var(--color-pink) !important;
+        }
       }
 
       input {
